@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
-        <div class="content-wrapper header-flex">
-            <a href="index.html"><img src="./res/logo.png" alt="logotype"></a>      
+    <header class="header">
+        <div class="content-wrapper header__flex">
+            <a href="index.html"><img src="./res/logo.png" alt="logotype"></a>
+            <form>
+                <input id="searchInput" type="text">
+                <button class="header__form-btn" id="searchBtn">Search</button>
+            </form>       
+            <button class="header__fav-btn" id="favBtn">Favorites</button> 
         </div>
     </header>
-
     <section>
         <div class="content-wrapper">
             <article class="movie-details" id="movieDetails">
+               
+               <div class="movie-details__img" id="imgDetail">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg" class="img" alt="">
+               </div>
+               <article class="movie-details__text">
+               <h1 id="title">Welcome to a World Without Rules</h1> 
+               <h2 id="genre">Genre : Action</h2>
+               <h3 id="year">Year :2017</h3>
+               <h3 id="runtime">Length of movie: 136 minutes</h3>
+               <h3 id="actors">Actors : chris pratt,Zoe Saldana, Dave Bautista</h3>
+               
+               <p id="plot" class="plot">Story :The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego?</p>
+             
+            
+            </article>
+               
+
 
             </article>
         </div>

@@ -6,6 +6,13 @@
     --primary-grey: #1A1A1A;
     --text-yellow: #F5C518;
     --text-blue: #5595E7;
+
+    --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
 }
 
 /* Base */
@@ -18,6 +25,14 @@
 body {
     background-color: var(--primary-black);
     max-width: 100%;
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  
+  color: var(--textColor);
+
 }
 
 /* Utils */
@@ -78,6 +93,8 @@ body {
     cursor: pointer;
 }
 
+
+
 /* Carousel */
 .carousel {
     margin: auto;
@@ -135,14 +152,119 @@ body {
 }
 
 /* Här skriver ni er CSS */
+.popular__card-container{
+    
+    width:90%;
+    height: 1800px;
+    background-color: var(--primary-grey);
+    margin:0 auto;
+   
+}
+
+.popular__card-container img{
+
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--dark-shadow);
+
+}
+
+.popular__img-wrapper{
+
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.popular__img-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust the gap size as needed */  
 
 
+}
+
+ /* Movie single product */  
+.movie-details{
+
+  display: flex;
+ 
+  padding-top:150px;
+
+}
+
+.movie-details p{
+
+  color: white;
+  font-size:1.3rem;
+  margin-top: 40px;
+  
+
+}
+.movie-details__text{
+
+  margin-left: 50px;
+}
+
+.movie-details__text h2{
+color:white;
+margin-bottom: 0.5rem;
+font-size: 1.3rem;
+font-weight: 400;
+
+}
+
+.movie-details__text h3{
+  color:white;
+  margin-bottom: 0.5rem;
+  font-size:1.3rem;
+  font-weight: 400;
+  }
+  
+
+
+.movie-details__text h1{
+color:white;
+font-size:2rem;
+margin-bottom:0.5rem;
+font-weight: 600;
+
+}
+
+.movie-details__img img{
+
+  width: 500px;
+  height:400px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .products-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .single-product-img {
+      height: 10rem;
+    }
+    .single-product .name {
+      font-size: 0.85rem;
+    }
+    .single-product .price {
+      font-size: 0.85rem;
+    }
+    .single-product {
+      margin-bottom: 0;
+    }
+  }
 
 
 
 /* Media Queries */
 @media screen and (max-width: 1380px) {
-    .content-wrapper {
+    
+  
+  .content-wrapper {
     }
 }
 
@@ -152,6 +274,66 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-    .content-wrapper {
-    }
+   
+  .movie-details__text h1{
+
+    font-size: 1.5rem;
+  }
+
+  .movie-details__text h2{
+
+    font-size: 1rem;
+  }
+
+  .movie-details__text h3{
+
+    font-size: 1rem;
+  }
+
+  .movie-details__text p{
+
+    font-size: 1.1rem;
+  }
+  
+  .movie-details{
+
+    flex-direction: column;
+    padding:0;
+  }
+
+  .movie-details__img{
+
+    
+    margin:0;
+    padding:20;
+  }
+
+  .movie-details__text{
+
+   margin:20px;
+  }
+  
+  .content-wrapper {
+    width:98%;
+    margin: 0;
+  }
+
+  .content-wrapper img{
+   
+    width: 100%;
+    border-radius: 20px;
+
+  }
+
+  .header input{
+
+    padding:0.3rem 2.4rem;
+
+    
+  }
+
+  .header form{
+
+    margin-right:30px;
+  }
 }
