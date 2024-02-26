@@ -96,6 +96,7 @@ const posterDB = async () => {
 function postImage(){
     
     newPostArray.forEach(function (src){
+    
     const createImg = document.createElement("img")
     createImg.src = src
     const createLink = document.createElement("a");
