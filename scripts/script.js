@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     posterDB()
 });
 
-
+//Hämtar youtube videos från API
 const url = 'https://santosnr6.github.io/Data/movies.json'
 const ulRef = document.querySelector('#youtube-slides')
 const imageRef = document.querySelector('.popular__img-container')  
@@ -19,7 +19,7 @@ const fetchMovies = async () => {
         const resp = await fetch(url)
         const data = await resp.json()
         let urlData = []
-
+        //stoppar i alla filmer i arrayen 
 
 
         data.map(Newdata => {
@@ -29,10 +29,8 @@ const fetchMovies = async () => {
         })
 
 
-        //console.log(`det här är de nya länkarna ${dataUrl(linksYoutube}`)
-
-        //    const randomSort = () => Math.random() - 0.5
-        //    const randomizedUrls = newUrlArray.sort(randomSort).slice(0,5)
+        // 5 stycken slumpmässigt genererade länkar
+        // som stoppas i generatedUrl
         const generatedUrl = []
         for (let i = 0; i < 5; i++) {
 
@@ -53,7 +51,7 @@ const fetchMovies = async () => {
 
 
 
-
+// Listar youtube-videos 5 stycken slumpmässigt
 
 function appendYoutubeSlides(listofGen) {
 
@@ -93,6 +91,8 @@ const posterDB = async () => {
     })
     postImage()
 }
+// skapar bilder och lägger till så att det 
+// det går att göra bilderna till länkar.
 function postImage(){
     
     newPostArray.forEach(function (src){
