@@ -55,8 +55,12 @@ h3{
 
 
 
-.d-none {
+/*.d-none {
     display: none;
+}*/
+
+.visible{
+  display: block;
 }
 
 /* Header */

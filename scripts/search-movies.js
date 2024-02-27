@@ -102,21 +102,21 @@ function displayMovieDetails(details){
         <p class = "awards"><b><i class = "fas fa-award"></i></b> ${details.Awards}</p>
     </div>
     `;
-presentSearchInput(details)
+// presentSearchInput(details)
  
-}
-function presentSearchInput(details){
-    const  resultContainer = document.querySelector('.result-container')
-    console.log(resultContainer)
+// }
+// function presentSearchInput(details){
+//     const  resultContainer = document.querySelector('.result-container')
+//     console.log(resultContainer)
     
-    const containerRef = document.querySelector('.container')
-    console.log(containerRef)
-    const h1Element = document.createElement("h1")
-    h1Element.textContent =`The title of the movie : ${details.Title}`
-    h1Element.style.color ="white";
-    console.log(h1Element)
-    containerRef.insertBefore(h1Element,resultContainer)   
+//     const containerRef = document.querySelector('.container')
+//     console.log(containerRef)
+//     const h1Element = document.createElement("h1")
+//     h1Element.textContent =`The title of the movie : ${details.Title}`
+//     h1Element.style.color ="white";
+//     console.log(h1Element)
+//     containerRef.insertBefore(h1Element,resultContainer)   
 
-}
+ }
 })
   
